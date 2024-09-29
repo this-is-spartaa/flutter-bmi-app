@@ -14,9 +14,13 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 50),
             GenderBox(),
-            SliderBox(),
-            SliderBox(),
+            Spacer(),
+            SliderBox(label: 'HEIGHT', value: 173, unit: 'cm'),
+            Spacer(),
+            SliderBox(label: 'WEIGHT', value: 72, unit: 'kg'),
+            Spacer(),
             SizedBox(
               width: double.infinity,
               height: 56,
@@ -25,6 +29,7 @@ class HomePage extends StatelessWidget {
                 child: Text("CALCULATE"),
               ),
             ),
+            SizedBox(height: 50),
           ],
         ),
       ),
