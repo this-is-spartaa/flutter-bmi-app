@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bmi_app/pages/home/widgets/gender_box.dart';
+import 'package:flutter_bmi_app/pages/home/widgets/slider_box.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -12,36 +14,13 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 80,
-              height: 80,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Theme.of(context).dividerColor,
-                ),
-              ),
-            ),
-            Text('MALE', style: TextStyle(fontSize: 20)),
-            Icon(Icons.male, size: 40),
-            Slider(
-              value: 100,
-              onChanged: (v) {},
-              min: 1,
-              max: 300,
-            ),
+            GenderBox(),
+            SliderBox(),
+            SliderBox(),
             SizedBox(
-              width: 200,
+              width: double.infinity,
               height: 56,
               child: ElevatedButton(
-                onPressed: () {},
-                child: Text("CALCULATE"),
-              ),
-            ),
-            SizedBox(height: 20),
-            SizedBox(
-              width: 200,
-              height: 56,
-              child: OutlinedButton(
                 onPressed: () {},
                 child: Text("CALCULATE"),
               ),
