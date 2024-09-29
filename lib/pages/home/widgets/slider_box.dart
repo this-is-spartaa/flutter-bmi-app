@@ -5,10 +5,12 @@ class SliderBox extends StatelessWidget {
     required this.label,
     required this.value,
     required this.unit,
+    required this.onChanged,
   });
   final String label;
   final double value;
   final String unit;
+  final void Function(double) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class SliderBox extends StatelessWidget {
         ),
         Slider(
           value: value,
-          onChanged: (v) {},
+          onChanged: onChanged,
           min: 1,
           max: 300,
         )
